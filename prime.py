@@ -3,7 +3,12 @@ def generate_prime_factors(n):
         raise ValueError("Input must be an integer.")
     if n == 1:
         return []
-    if n == 2:
-        return [2]
-    if n == 3:
-        return [3]
+
+    factors = []
+    divisor = 2
+    while n > 1:
+        while n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1
+    return factors
