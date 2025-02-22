@@ -16,6 +16,9 @@ class TestPrimeFactors(unittest.TestCase):
     def test_input_is_2(self):
         self.assertEqual(generate_prime_factors(2), [2])
 
+    def test_input_is_3(self):
+        self.assertEqual(generate_prime_factors(3), [3])
+
 
 if __name__ == '__main__':
     unittest.main()
